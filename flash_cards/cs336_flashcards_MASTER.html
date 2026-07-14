@@ -257,7 +257,7 @@ const LECTURES = [
       {
         topic: "Scaling Laws",
         q: "What is a scaling recipe, and what is the Chinchilla compute-optimal finding?",
-        a: "A scaling recipe maps FLOPs → hyperparameters. Run small experiments, fit a scaling law, extrapolate to full scale.\n\nChinchilla (Hoffmann+ 2022): given compute budget C = 6ND, the optimal ratio is D ≈ 20N.\nExample: 70B model → train on ~1.4T tokens.\n(Caveat: ignores inference cost, which favors smaller models.)"
+        a: "A scaling recipe: train a family of smaller models across varying N/D under a fixed compute budget, fit a power law to loss, then extrapolate to pick N/D for the full-scale run.\n\nChinchilla (Hoffmann+ 2022): given compute budget C = 6ND, the optimal ratio is D ≈ 20N.\nExample: 70B model → train on ~1.4T tokens.\n(Caveat: ignores inference cost, which favors smaller models.)"
       },
       {
         topic: "Systems",
